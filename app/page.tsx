@@ -42,11 +42,11 @@ export default function Home() {
               <div>
                 <h3 className="text-lg md:text-lg font-bold mb-4 font-mono text-amber-100/80">Mission Statement</h3>
                 <p className="text-white font-mono text-sm md:text-md leading-relaxed max-w-prose">
-                  At Lowercase B's Aegis Fund, we are dedicated to partnering with the world's best founders to build
-                  the next generation of iconic companies. By investing early in transformative ideas, we empower
-                  visionary leaders to redefine industries and leave a lasting legacy. Our hands-on approach combines
-                  strategic guidance, operational expertise, and a commitment to excellence, ensuring every company we
-                  back is set on a path to success.
+                  At Lowercase B&apos;s Aegis Fund, we are dedicated to partnering with the world&apos;s best founders
+                  to build the next generation of iconic companies. By investing early in transformative ideas, we
+                  empower visionary leaders to redefine industries and leave a lasting legacy. Our hands-on approach
+                  combines strategic guidance, operational expertise, and a commitment to excellence, ensuring every
+                  company we back is set on a path to success.
                 </p>
               </div>
               <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-amber-600/30 to-transparent"></div>
@@ -95,7 +95,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Questions? Let's connect.</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Questions? Let&apos;s connect.</h2>
             <a
               href="mailto:team@lowercaseb.com"
               className="text-slate-800 p-4 rounded-md hover:text-slate-800/80 transition-colors bg-slate-100 text-lg"
