@@ -4,13 +4,25 @@ import { Linkedin, Twitter } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function Home() {
-  const cardVariants = {
+  const sectionVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  const headingVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
         ease: 'easeOut',
       },
     },
@@ -23,72 +35,63 @@ export default function Home() {
 
         <section>
           <motion.div
-            className="flex max-w-screen-2xl flex-col gap-3 md:flex-row sm:gap-6 md:gap-12 lg:gap-24 justify-center px-4 sm:px-6 lg:px-20"
+            className="flex flex-col gap-12 justify-center mx-auto px-4 sm:px-6 lg:px-20 max-w-screen-lg"
             initial="hidden"
             animate="visible"
             variants={{
               visible: {
                 transition: {
                   staggerChildren: 0.2,
-                  delayChildren: 0.6, // Delay after hero animation
+                  delayChildren: 0.6,
                 },
               },
             }}
           >
-            <motion.div
-              variants={cardVariants}
-              className="relative overflow-hidden w-full rounded-lg backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col border-slate-100/20 border-2"
-            >
-              <div>
-                <h3 className="text-lg md:text-lg font-bold mb-4 font-mono text-amber-100/80">Mission Statement</h3>
-                <p className="text-white font-mono text-sm md:text-md leading-relaxed max-w-prose">
-                  At Lowercase B&apos;s Aegis Fund, we are dedicated to partnering with the world&apos;s best founders
-                  to build the next generation of iconic companies. By investing early in transformative ideas, we
-                  empower visionary leaders to redefine industries and leave a lasting legacy. Our hands-on approach
-                  combines strategic guidance, operational expertise, and a commitment to excellence, ensuring every
-                  company we back is set on a path to success.
-                </p>
-              </div>
-              <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-amber-600/30 to-transparent"></div>
+            <motion.div variants={sectionVariants} className="relative overflow-hidden w-full p-6 flex flex-col">
+              <motion.h3
+                variants={headingVariants}
+                className="text-xl md:text-2xl font-bold mb-4 font-mono text-amber-100/80 relative z-10"
+              >
+                Mission Statement
+              </motion.h3>
+              <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-amber-600/30 to-transparent z-0"></div>
+              <p className="text-white font-mono text-sm md:text-md leading-relaxed mt-4">
+                At Lowercase B&apos;s Aegis Fund, we are dedicated to partnering with the world&apos;s best founders to
+                build the next generation of iconic companies. By investing early in transformative ideas, we empower
+                visionary leaders to redefine industries and leave a lasting legacy. Our hands-on approach combines
+                strategic guidance, operational expertise, and a commitment to excellence, ensuring every company we
+                back is set on a path to success.
+              </p>
             </motion.div>
 
-            <motion.div
-              variants={cardVariants}
-              className="relative overflow-hidden w-full rounded-lg backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col border-slate-100/20 border-2"
-            >
-              <div>
-                <h3 className="text-lg md:text-lg font-bold mb-4 font-mono text-amber-100/80">Investment Philosophy</h3>
-                <h4 className="text-md md:text-lg font-semibold mb-2 font-mono text-white/60">
-                  Crafting the Future with Purpose
-                </h4>
-                <p className="text-white font-mono text-sm md:text-md leading-relaxed max-w-prose">
-                  Our investment philosophy is rooted in the belief that iconic companies are built with intention,
-                  resilience, and vision. Inspired by the craftsmanship of the past, we apply a boutique, hands-on
-                  approach to help founders turn bold ideas into impactful realities. We focus on pre-seed, seed, and
-                  Series A stages, aligning our expertise with founders who are ready to scale their innovations and
-                  make history.
-                </p>
-              </div>
-              <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-amber-700/30 to-transparent"></div>
+            <motion.div variants={sectionVariants} className="relative overflow-hidden w-full p-6 flex flex-col">
+              <motion.h3
+                variants={headingVariants}
+                className="text-xl md:text-2xl font-bold mb-4 font-mono text-amber-100/80 relative z-10"
+              >
+                Investment Philosophy
+              </motion.h3>
+              <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-amber-700/30 to-transparent z-0"></div>
+              <h4 className="text-md md:text-lg font-semibold mb-2 font-mono text-white/60 mt-4">
+                Crafting the Future with Purpose
+              </h4>
+              <p className="text-white font-mono text-sm md:text-md leading-relaxed">
+                Our investment philosophy is rooted in the belief that iconic companies are built with intention,
+                resilience, and vision. Inspired by the craftsmanship of the past, we apply a boutique, hands-on
+                approach to help founders turn bold ideas into impactful realities. We focus on pre-seed, seed, and
+                Series A stages, aligning our expertise with founders who are ready to scale their innovations and make
+                history.
+              </p>
             </motion.div>
           </motion.div>
         </section>
 
-        <section className="relative py-44">
-          {/* Background image */}
-          <motion.div
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage: 'url(/lines.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'top center',
-            }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 0.3, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-          />
+        <section className="relative py-32">
+          <div className="absolute inset-0 bg-black">
+            <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+            <div className="absolute left-0 right-0 top-[-10%] h-[200px] w-[200px] rounded-full bg-[radial-gradient(circle_80px_at_50%_300px,#fbfbfb36,#000)]"></div>
+          </div>
 
-          {/* Content */}
           <motion.div
             className="relative z-10 flex flex-col items-center gap-4 text-center"
             initial={{ opacity: 0, y: 20 }}
