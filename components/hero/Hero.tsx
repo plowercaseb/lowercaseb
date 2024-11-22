@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
-            <nav
+            {/* <nav
               className={`items-center justify-between ${
                 isMenuOpen ? 'flex' : 'hidden'
               } w-full md:flex md:w-auto md:order-1`}
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                   </a>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
           </div>
         </div>
       </header>

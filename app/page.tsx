@@ -1,4 +1,6 @@
 'use client';
+import { TextShimmer } from '@/components/common/TextShimmer';
+import { TextEffect } from '@/components/common/TextEffect';
 import Hero from '@/components/hero/Hero';
 import { Linkedin, Twitter } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -35,7 +37,7 @@ export default function Home() {
 
         <section>
           <motion.div
-            className="flex flex-col gap-12 justify-center mx-auto px-4 sm:px-6 lg:px-20 max-w-screen-lg"
+            className="flex flex-col gap-12 justify-center px-4 sm:px-6 lg:px-20 max-w-screen-lg"
             initial="hidden"
             animate="visible"
             variants={{
@@ -47,24 +49,22 @@ export default function Home() {
               },
             }}
           >
-            <motion.div variants={sectionVariants} className="relative overflow-hidden w-full p-6 flex flex-col">
-              <motion.h3
+            <motion.div variants={sectionVariants} className="relative overflow-hidden w-full px-4 py-2 flex flex-col">
+              {/* <motion.h3
                 variants={headingVariants}
                 className="text-xl md:text-2xl font-bold mb-4 font-mono text-amber-100/80 relative z-10"
               >
                 Mission Statement
               </motion.h3>
-              <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-amber-600/30 to-transparent z-0"></div>
-              <p className="text-white font-mono text-sm md:text-md leading-relaxed mt-4">
-                At Lowercase B&apos;s Aegis Fund, we are dedicated to partnering with the world&apos;s best founders to
-                build the next generation of iconic companies. By investing early in transformative ideas, we empower
-                visionary leaders to redefine industries and leave a lasting legacy. Our hands-on approach combines
-                strategic guidance, operational expertise, and a commitment to excellence, ensuring every company we
-                back is set on a path to success.
-              </p>
+              <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-amber-600/30 to-transparent z-0"></div> */}
+              <TextEffect className="text-white font-mono font-light text-lg md:text-md leading-relaxed mt-4">
+                Lowercase B Ventures presents the Aegis Fund, a $50 million early-stage fund to back transformative
+                AI-native startups. Our strategy focuses on companies developing scalable, AI-powered applications in
+                three primary sectors: Enterprise SaaS, Cybersecurity, and Defense/Industrial technologies.
+              </TextEffect>
             </motion.div>
 
-            <motion.div variants={sectionVariants} className="relative overflow-hidden w-full p-6 flex flex-col">
+            {/* <motion.div variants={sectionVariants} className="relative overflow-hidden w-full p-6 flex flex-col">
               <motion.h3
                 variants={headingVariants}
                 className="text-xl md:text-2xl font-bold mb-4 font-mono text-amber-100/80 relative z-10"
@@ -82,7 +82,7 @@ export default function Home() {
                 Series A stages, aligning our expertise with founders who are ready to scale their innovations and make
                 history.
               </p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </section>
 
@@ -98,7 +98,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Questions? Let&apos;s connect.</h2>
+            <h5 className="text-2xl md:text-3xl font-bold text-white mb-4">Questions? Let&apos;s connect.</h5>
             <a
               href="mailto:team@lowercaseb.com"
               className="text-slate-800 p-4 rounded-md hover:text-slate-800/80 transition-colors bg-slate-100 text-lg"
@@ -110,28 +110,28 @@ export default function Home() {
       </main>
       <footer className="flex flex-col gap-6 px-4 sm:px-6 lg:px-20 py-4 relative backdrop-blur-sm border-t border-slate-100/20">
         <div className="w-full p-4 md:flex md:items-center md:justify-between">
-          <span className="text-sm text-amber-100/60 font-mono sm:text-center">
+          <TextShimmer as="p" className="text-sm text-amber-100/60 font-mono sm:text-center">
             © 2024 Lowercase B. All Rights Reserved.
-          </span>
+          </TextShimmer>
           <ul className="flex items-center mt-3 sm:mt-0 gap-4">
             <li>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/lowercase-b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-100/60 hover:text-amber-100/80 transition-colors"
               >
-                <Linkedin size={20} />
+                <Linkedin size={24} />
               </a>
             </li>
             <li>
               <a
-                href="https://x.com"
+                href="https://x.com/Lowercaseb_Labs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-100/60 hover:text-amber-100/80 transition-colors"
               >
-                <Twitter size={20} />
+                <Twitter size={24} />
               </a>
             </li>
           </ul>
