@@ -60,7 +60,9 @@ export default function Home() {
               <TextEffect className="text-white font-mono font-light text-lg md:text-md leading-relaxed mt-4">
                 Lowercase B Ventures presents the Aegis Fund, a $50 million early-stage fund to back transformative
                 AI-native startups. Our strategy focuses on companies developing scalable, AI-powered applications in
-                three primary sectors: Enterprise SaaS, Cybersecurity, and Defense/Industrial technologies.
+                three primary sectors: Enterprise SaaS, Cybersecurity, and Defense/Industrial technologies. We are
+                uniquely positioned to capitalize on this opportunity due to our founder-first approach, deep
+                operational expertise, and unrivaled professional networks.
               </TextEffect>
             </motion.div>
 
