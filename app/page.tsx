@@ -18,17 +18,17 @@ export default function Home() {
     },
   };
 
-  const headingVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
-    },
-  };
+  // const headingVariants = {
+  //   hidden: { opacity: 0, x: -50 },
+  //   visible: {
+  //     opacity: 1,
+  //     x: 0,
+  //     transition: {
+  //       duration: 0.6,
+  //       ease: 'easeOut',
+  //     },
+  //   },
+  // };
 
   return (
     <div className="flex flex-col min-h-screen">
