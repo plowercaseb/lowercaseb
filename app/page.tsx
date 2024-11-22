@@ -37,7 +37,7 @@ export default function Home() {
 
         <section>
           <motion.div
-            className="flex flex-col gap-12 justify-center px-4 sm:px-6 lg:px-20 max-w-screen-lg"
+            className="flex flex-col gap-12 justify-center px-4 sm:px-6 lg:px-20 max-w-screen-lg mx-auto"
             initial="hidden"
             animate="visible"
             variants={{
@@ -49,7 +49,10 @@ export default function Home() {
               },
             }}
           >
-            <motion.div variants={sectionVariants} className="relative overflow-hidden w-full px-4 py-2 flex flex-col">
+            <motion.div
+              variants={sectionVariants}
+              className="relative overflow-hidden w-full px-4 py-2 flex flex-col text-center"
+            >
               {/* <motion.h3
                 variants={headingVariants}
                 className="text-xl md:text-2xl font-bold mb-4 font-mono text-amber-100/80 relative z-10"
@@ -91,7 +94,6 @@ export default function Home() {
         <section className="relative py-32">
           <div className="absolute inset-0 bg-black">
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-            <div className="absolute left-0 right-0 top-[-10%] h-[200px] w-[200px] rounded-full bg-[radial-gradient(circle_80px_at_50%_300px,#fbfbfb36,#000)]"></div>
           </div>
 
           <motion.div
