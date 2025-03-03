@@ -1,7 +1,7 @@
 'use client';
-import { TextShimmer } from '@/components/common/TextShimmer';
-import { TextEffect } from '@/components/common/TextEffect';
-import Hero from '@/components/hero/Hero';
+import { TextShimmer } from '../components/common/TextShimmer';
+import { TextEffect } from '../components/common/TextEffect';
+import Hero from '../components/hero/Hero';
 import { Linkedin, Twitter } from 'lucide-react';
 import { motion } from 'motion/react';
 
