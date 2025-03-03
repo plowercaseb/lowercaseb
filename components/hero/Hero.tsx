@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'motion/react';
-import { TextScramble } from '@/components/common/TextScramble';
+import { TextScramble } from '../common/TextScramble';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
