@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { PodcastEpisodeCard } from '@/components/podcast/podcast-episode-card';
-import { SearchEpisodes } from '@/components/podcast/search-episodes';
+import { PodcastEpisodeCard } from '../components/podcast/podcast-episode-card';
+import { SearchEpisodes } from '../components/podcast/search-episodes';
 
 // This would typically come from your CMS or API
 const EPISODES = [
